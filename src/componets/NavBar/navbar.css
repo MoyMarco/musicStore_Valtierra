@@ -1,23 +1,12 @@
-
-.title {
-  transition-duration: .6s;
-  position: absolute;
-  margin-left: 6em;
-}
-
-.title:hover {
-  transition-duration: .6s;
-  position: absolute;
-  margin-left: 6em;
-  font-size: 1.1em;
-  color: #3dbeff !important;
-}
-
 .option {
   transition-duration: .8s;
 }
 
 .option:hover {
   transition-duration: .8s;
-  color: #3dbeff !important;
+  color: #3dbeff;
+}
+
+.center {
+  margin: auto;
 }
