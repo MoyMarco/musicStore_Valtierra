@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './componets/NavBar/NavBar'
 
 function App() {
   return (
     <div className="App">
-      <h1>MusicStore - Valtierra</h1>
+      <NavBar/>
     </div>
   );
 }
