@@ -19,7 +19,7 @@ const ItemCount = ({stock}) => {
         if (count > 0) setCount(count - 1)
     };
     return(
-        <Card sx={overrideStyles.card}>
+        <Card sx={overrideStyles.cardCount}>
             <CardContent>
                 <Typography sx={overrideStyles.subTitleCardSize} component="div">
                     Cantidad

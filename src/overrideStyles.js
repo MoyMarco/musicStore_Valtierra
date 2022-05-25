@@ -16,16 +16,47 @@ const overrideStyles = ({
         position: 'absolute',
         left: '96%'
     },
-    card: {
+    cardCount: {
         width: '14em',
         backgroundColor: '#444',
         color: '#ffffff',
         margin: 'auto'
     },
+    titleCardSize: {
+        fontWeight: 'bold',
+        fontSize: '1.08em',
+        color: '#fff',
+        marginBottom: '.5em'
+    },
     subTitleCardSize: {
         fontSize: '1.05em',
         color: '#bbb',
-        marginBottom: '.6em'
+        marginBottom: '.5em'
+    },
+    cardItem: {
+        position: 'relative',
+        backgroundColor: '#222',
+        color: '#ffffff',
+        margin: 'auto',
+        height: '30em',
+        maxWidth: '30em'
+    },
+    itemImage:{
+        position: 'absolute',
+        margin: 'auto',
+        height: '100%',
+        width: '100%',
+        left: 0,
+        top: 0
+    },
+    itemImageDetails: {
+        position: 'absolute',
+        padding: '1em 0',
+        margin: 'auto',
+        backgroundColor: 'rgba(10, 10, 10, 0.7)',
+        left: 0,
+        bottom: 0,
+        width: '100%'        
     }
   });
 

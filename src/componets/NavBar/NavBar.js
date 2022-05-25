@@ -19,7 +19,7 @@ export default function NavBar() {
                 <div className='center'>
                     <Button variant='text' className='option' sx={overrideStyles.white}>Top Charts</Button>
                     <Button variant='text' className='option' sx={overrideStyles.white}>Artistas</Button>
-                    <Button variant='text' className='option' sx={overrideStyles.white}>Albums</Button>
+                    <Button variant='text' className='option' sx={overrideStyles.white}>Álbumes</Button>
                 </div>
                 <CartWidget/>        
           </Toolbar>

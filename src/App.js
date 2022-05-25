@@ -7,7 +7,7 @@ function App() {
     <div className='App'>
       <NavBar/>
       <br/><br/><br/><br/>
-      <ItemListContainer title='Titulo para el contenedor' />
+      <ItemListContainer title='Álbumes' />
     </div>
   );
 }
