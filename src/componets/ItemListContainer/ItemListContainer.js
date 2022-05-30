@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
-import ItemCount from '../ItemCount/ItemCount';
 import ItemList from '../ItemList/ItemList';
 import products from '../../utils/productMock';
 
@@ -27,7 +26,6 @@ const [productList, setProducts] = useState([]);
                 {title} 
             </Typography>
             <ItemList items={productList}/>
-            {/* <ItemCount stock={10}/> */}
         </div>
     )
 }

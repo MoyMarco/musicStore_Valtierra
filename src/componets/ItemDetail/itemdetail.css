@@ -1,0 +1,27 @@
+.bgImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: .6;
+    filter: grayscale(100%);
+}
+.albumPosition {
+    position: relative;
+    float: right;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+.infoPosition {
+    position: relative;
+    float: left;
+}
+.verticalCenter {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+

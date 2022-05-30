@@ -7,4 +7,8 @@ const products = [
     { id: 6, title:'Scorcha', description:'Album de Sean Paul', price:'120', pictureUrl:'scorcha.jpg', stock:10 }
 ];
 
+const productDetail = { id: 1, title:'Dance Fever', artist: 'Florence + the Machine', description:'Dance Fever es el quinto álbum de estudio del grupo británico, Florence and the Machine, lanzado mundialmente el 13 de mayo de 2022 por el sello discográfico Polydor. El álbum, fue precedido por tres sencillos: «King», «Heaven is Here» y «My Love».', price:'120.00', pictureUrl:'dance_fever.jpg', pictureArtistUrl:'florence-the-machine.jpg', stock:10 };
+
 export default products;
+
+export {productDetail};
