@@ -1,3 +1,7 @@
+# Enfoque del proyecto
+
+El enfoque de este proyecto es una tienda de cds de musica. La idea es apegarse un poco a las tienedas convencionales, mostrando albums y separandolos por artista, como se veria en una tinda fisica.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

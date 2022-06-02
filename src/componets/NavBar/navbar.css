@@ -1,5 +1,6 @@
 .option {
   transition-duration: .8s;
+  color:white;
 }
 
 .option:hover {

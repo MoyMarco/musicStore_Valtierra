@@ -91,6 +91,15 @@ const overrideStyles = ({
     itemCountPosition: {
         position: 'relative',
         top: 100
+    },
+    loadingMessage: {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%,-50%)',
+        maxWidth: '50%',
+        textAlign: 'center',
+        color: '#bbb',
     }
   });
 
