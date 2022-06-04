@@ -8,7 +8,7 @@ import overrideStyles from '../../overrideStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; 
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({ stock, setShowButton }) => {
     const [count, setCount] = useState(0);
 
     const countAdd = () => {
@@ -17,7 +17,8 @@ const ItemCount = ({stock}) => {
 
     const countSubstract = () => {
         if (count > 0) setCount(count - 1)
-    };
+    }
+
     return(
         <Card sx={overrideStyles.cardCount}>
             <CardContent>
@@ -31,7 +32,7 @@ const ItemCount = ({stock}) => {
                 <Button onClick={() => countSubstract()} disabled={count === 0}><FontAwesomeIcon icon={solid('caret-down')}/></Button>
             </CardContent>
             <CardActions>
-                <Button sx={{margin: 'auto'}}>Agragar al carrito</Button>
+                <Button sx={{margin: 'auto'}} disabled={count === 0} onClick={() => setShowButton(true)}>Agragar al carrito</Button>
             </CardActions>
         </Card>
     )

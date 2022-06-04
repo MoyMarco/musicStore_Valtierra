@@ -90,7 +90,7 @@ const overrideStyles = ({
     },
     itemCountPosition: {
         position: 'relative',
-        top: 100
+        top: 70
     },
     loadingMessage: {
         position: 'absolute',
@@ -100,7 +100,18 @@ const overrideStyles = ({
         maxWidth: '50%',
         textAlign: 'center',
         color: '#bbb',
+    },
+    notFoundMessage: {
+        fontSize: '2em',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%,-50%)',
+        maxWidth: '50%',
+        textAlign: 'center',
+        color: '#333',
     }
+    
   });
 
   export default overrideStyles;
