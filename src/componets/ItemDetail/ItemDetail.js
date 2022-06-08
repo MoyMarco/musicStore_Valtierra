@@ -1,5 +1,5 @@
 import './itemdetail.css'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Grid, Button } from '@mui/material';
@@ -7,12 +7,18 @@ import Typography from '@mui/material/Typography';
 import overrideStyles from '../../overrideStyles';
 import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
+import CartContext from '../../contexts/CartContext';
 
 const ItemDetail = ({item}) => {
 
   const [showButton, setShowButton] = useState(false);
+  const [itemAux, setItemAux] = useState(item)
+  const [quantity, setQuantity] = useState(0);
+
+  const { addItemToCart } = useContext(CartContext);
 
   const {title, description, artist, price, pictureUrl, pictureArtistUrl, stock} = item;
+
   return (
     <div>
       <img className='bgImage' src={`/images/${pictureArtistUrl}`} alt={title}/>
@@ -41,8 +47,8 @@ const ItemDetail = ({item}) => {
                     <Typography variant="overline" sx={ overrideStyles.blue }>costo</Typography>
                     <Typography sx={overrideStyles.titleCardSize}>$ {price}</Typography>
                     {!showButton
-                      ? <ItemCount setShowButton={setShowButton} stock={stock} />
-                      : <Button variant='outlined'><Link style={overrideStyles.blue} to='/cart'> Terminar compra </Link></Button>
+                      ? <ItemCount setShowButton={setShowButton} stock={stock} setQuantity={setQuantity}/>
+                      : <Button variant='outlined' onClick={ () => { setItemAux(item.quantity = quantity); addItemToCart(itemAux); }}><Link style= {overrideStyles.blue} to='/cart'> Terminar compra </Link></Button>
                     }
                   </div> 
                 </div>

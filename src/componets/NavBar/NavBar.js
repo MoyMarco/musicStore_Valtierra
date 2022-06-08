@@ -16,7 +16,7 @@ import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 export default function NavBar() {
     const [anchorEl, setAnchorEl] = useState(null);
-    const [category, setCategories] = useState([]);
+    const [categoriesList, setCategories] = useState([]);
     const open = Boolean(anchorEl);
 
     const handleClick = (event) => {
@@ -66,7 +66,7 @@ export default function NavBar() {
                         'aria-labelledby': 'basic-button',
                         }}
                     >
-                        {categories.map(category => <MenuItem onClick={handleClose}><Link to={`/category/${category}`}>{category}</Link></MenuItem>)}
+                        {categoriesList.map((category, index) => <MenuItem key={index} onClick={handleClose}><Link to={`/category/${category}`}>{category}</Link></MenuItem>)}
                     </Menu>
                     <Button variant='text' className='option' sx={overrideStyles.white}><Link className='option' to={'/'}>Álbumes</Link></Button>
                 </div>

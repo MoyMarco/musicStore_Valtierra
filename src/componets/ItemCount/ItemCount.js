@@ -8,7 +8,7 @@ import overrideStyles from '../../overrideStyles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; 
 
-const ItemCount = ({ stock, setShowButton }) => {
+const ItemCount = ({ stock, setShowButton, setQuantity }) => {
     const [count, setCount] = useState(0);
 
     const countAdd = () => {
@@ -32,7 +32,7 @@ const ItemCount = ({ stock, setShowButton }) => {
                 <Button onClick={() => countSubstract()} disabled={count === 0}><FontAwesomeIcon icon={solid('caret-down')}/></Button>
             </CardContent>
             <CardActions>
-                <Button sx={{margin: 'auto'}} disabled={count === 0} onClick={() => setShowButton(true)}>Agragar al carrito</Button>
+                <Button sx={{margin: 'auto'}} disabled={count === 0} onClick={ () => { setShowButton(true); setQuantity(count) } }>Agragar al carrito</Button>
             </CardActions>
         </Card>
     )

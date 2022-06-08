@@ -4,10 +4,14 @@ import ItemDetailContainer from './componets/ItemDetailContainer/ItemDetailConta
 import ItemListContainer from './componets/ItemListContainer/ItemListContainer';
 import NavBar from './componets/NavBar/NavBar'
 import NotFound from './pages/NotFound';
+import { CartProvider } from './contexts/CartContext';
+import Cart from './componets/Cart';
+
 
 function App() {
   return (
     <div className='App'>
+      <CartProvider>
       <BrowserRouter>
         <NavBar/>
         <br/><br/><br/><br/>
@@ -15,10 +19,11 @@ function App() {
           <Route path='/' element={<ItemListContainer title='Todos los Álbumes' />}/>
           <Route path='/category/:artist' element={<ItemListContainer title='Álbumes' />}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-          <Route path='/cart'/>
+          <Route path='/cart' element={<Cart/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
