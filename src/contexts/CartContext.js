@@ -7,7 +7,14 @@ const CartProvider = ({ children }) => {
 
     const addItemToCart = product => {
         const isInCart = cartListItems.find(item => item.id === product.id);
-        if(!isInCart) setCartListItems(cartListItems => [...cartListItems, product])
+        if (!isInCart) setCartListItems(cartListItems => [...cartListItems, product])
+        else {
+            const newCartListItems = cartListItems.map(item => {
+                if (item.id === product.id) return { ...item, quantity: item.quantity + product.quantity }
+                return item
+            })
+            setCartListItems(newCartListItems);
+        }
     };
 
     const clearCart = () => {
@@ -35,3 +42,4 @@ const CartProvider = ({ children }) => {
 
 export default CartContext;
 export { CartProvider };
+ 

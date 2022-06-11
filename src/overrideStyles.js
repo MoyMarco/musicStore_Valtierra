@@ -110,6 +110,31 @@ const overrideStyles = ({
         maxWidth: '50%',
         textAlign: 'center',
         color: '#333',
+    },
+    itemCart: {
+        p: 2,
+        margin: 'auto',
+        flexGrow: 1,
+        marginBottom: '2em',
+        backgroundColor: 'rgba(10, 10, 10, 0.03)'
+    },
+    centerControlPrice: {
+        position: 'relative',
+        top: '60%',
+        left: '50%',
+        transform: 'translate(-50%,-50%)' 
+    },
+    centerControlQuantity: {
+        position: 'relative',
+        top: '40%',
+        left: '50%',
+        transform: 'translate(-50%,-50%)' 
+    },
+    rightControl: {
+        position: 'relative',
+        top: '50%',
+        left: '100%',
+        transform: 'translate(140%,-50%)' 
     }
     
   });

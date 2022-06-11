@@ -70,7 +70,7 @@ export default function NavBar() {
                     </Menu>
                     <Button variant='text' className='option' sx={overrideStyles.white}><Link className='option' to={'/'}>Álbumes</Link></Button>
                 </div>
-                <CartWidget/>        
+                <CartWidget/>   
           </Toolbar>
       </AppBar>
   );
