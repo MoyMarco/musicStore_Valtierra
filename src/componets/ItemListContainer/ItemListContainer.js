@@ -1,22 +1,25 @@
 import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import ItemList from '../ItemList/ItemList';
-import products from '../../utils/productMock';
 import overrideStyles from '../../overrideStyles';
 import { CircularProgress } from '@mui/material';
 import { useParams } from 'react-router-dom';
+
+import { collection, getDocs } from 'firebase/firestore';
+import db from '../../utils/firebaseConfig'
 
 const ItemListContainer = ({title}) => {
     const { artist } = useParams();
     const [productList, setProducts] = useState([]);
 
-    const getProducts = () => {
-
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(products)
-            }, 2000);
-        })
+    const getProducts = async () => {
+        const productSnapshot = await getDocs(collection(db, 'productos'))
+        return productSnapshot.docs.map(doc => {
+            const product = doc.data();
+            product.id = doc.id;
+            return product;
+        }
+        );
     };
 
     useEffect(() => {

@@ -8,9 +8,11 @@ import './navbar.css';
 import overrideStyles from '../../overrideStyles';
 import { Link } from 'react-router-dom';
 import { Menu, MenuItem } from '@mui/material';
-import { categories } from '../../utils/productMock';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'; 
+
+import { collection, getDocs } from 'firebase/firestore';
+import db from '../../utils/firebaseConfig'
 
 
 
@@ -26,12 +28,10 @@ export default function NavBar() {
         setAnchorEl(null);
     };
 
-    const getCategories = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(categories)
-            }, 2000);
-        })
+    const getCategories = async () => {
+        const productSnapshot = await getDocs(collection(db, 'productos'))
+        const categories = productSnapshot.docs.map(doc => doc.data().artist);
+        return categories.filter((category, index, self) => self.indexOf(category) === index);
     };
 
     useEffect(() => {

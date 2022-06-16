@@ -1,22 +1,23 @@
 import { useState, useEffect } from 'react'
-import products from '../../utils/productMock';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
 import Typography from '@mui/material/Typography';
 import overrideStyles from '../../overrideStyles';
 import CircularProgress from '@mui/material/CircularProgress';
 
+import { doc, getDoc } from 'firebase/firestore';
+import db from '../../utils/firebaseConfig'
+
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [product, setProduct] = useState([]);
 
-    const getItem = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-              const product = products.find(product => product.id == id);
-              resolve(product);
-            }, 2000);
-        })
+    const getItem = async () => {
+      let item;
+      const itemSnapshot = await getDoc(doc(db, 'productos', id));
+      item = itemSnapshot.data();
+      item.id = itemSnapshot.id;
+      return item;
     };
 
     useEffect(() => {
