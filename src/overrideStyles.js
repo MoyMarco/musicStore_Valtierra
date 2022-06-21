@@ -134,7 +134,7 @@ const overrideStyles = ({
         position: 'relative',
         top: '50%',
         left: '100%',
-        transform: 'translate(140%,-50%)' 
+        transform: 'translate(70%,-50%)' 
     }
     
   });
