@@ -17,6 +17,9 @@ El proyecto esta enfocado en simular venta de CD's de musica. La categorizacion 
 #### Modulos utilizados
  **Firebase** ; para el manejo de información y alojamiento en la nube con ayuda especifica del servicio firestore. 
  **moment** ; para el manejo de fecha, para darle un formato mas claro, la fecha es guardada junto con la demas información de la orden.
+
  **react-router-dom** ; para el manejo y definición de rutas de navegación de las que se compone el proyecto.
+
+`No pude lograr que el gif se visualizara pero el link se encuentra en este archivo.`
 
  ![Ejemplo de compra](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22aa3ccc-9193-4548-ae50-c7f4a9dbd417/df7zzz8-5330c6da-2b31-407c-9ba0-9d9ff33b57ab.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzIyYWEzY2NjLTkxOTMtNDU0OC1hZTUwLWM3ZjRhOWRiZDQxN1wvZGY3enp6OC01MzMwYzZkYS0yYjMxLTQwN2MtOWJhMC05ZDlmZjMzYjU3YWIuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.NROX75bpShgDL-2QxKup5xTTAcQzdGWlDnlooJAdWx0)
