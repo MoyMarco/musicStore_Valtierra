@@ -49,7 +49,8 @@ const overrideStyles = ({
         color: '#ffffff',
         margin: 'auto',
         height: '30em',
-        maxWidth: '30em'
+        maxWidth: '30em',
+        marginTop: '2em'
     },
     itemImage:{
         position: 'absolute',

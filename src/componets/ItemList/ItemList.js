@@ -14,6 +14,7 @@ const ItemList = ({items}) => {
             )
           })
         }
+        <div style={{marginTop:'8em'}}>footer</div>
       </Grid>
     </>
   )

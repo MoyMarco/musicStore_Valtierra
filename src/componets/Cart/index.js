@@ -69,7 +69,7 @@ const Cart = () => {
                     <Paper sx={overrideStyles.itemCart}>
                         <Grid container>
                             <Grid item>
-                            <Button variant='contained' onClick={() => handleClickOpen()}>Culminar compra</Button>
+                                <Button variant='contained' onClick={() => handleClickOpen()}>Culminar compra</Button>
                                 <Button onClick={() => clearCart()}>Limpiar carrito</Button>
                             </Grid>
                             <Grid item >

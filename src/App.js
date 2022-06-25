@@ -6,6 +6,7 @@ import NavBar from './componets/NavBar/NavBar'
 import NotFound from './pages/NotFound';
 import { CartProvider } from './contexts/CartContext';
 import Cart from './componets/Cart';
+import Footer from './componets/Footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
           <Route path='*' element={<NotFound/>}/>
         </Routes>
+        <Footer/>
       </BrowserRouter>
       </CartProvider>
     </div>

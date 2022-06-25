@@ -46,7 +46,6 @@ export default function NavBar() {
                         <Link style={overrideStyles.white} to={'/'}>MusicStore</Link>
                 </IconButton>
                 <div className='center'>
-                    <Button variant='text' className='option' sx={overrideStyles.white}>Top Charts</Button>
                     <Button 
                     variant='text' 
                     className='option' 
